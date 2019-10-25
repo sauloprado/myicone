@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_busca" value="name:id_icone;datatype:int,name:nome_icone;datatype:string,name:categoria_icone;datatype:string,name:descricao_icone;datatype:string,name:site_icone;datatype:string,name:icone_icone;datatype:string,name:meta_busca;datatype:string" />
+	<infoitem key="UD_icones" value="name:id_icone;datatype:int,name:nome_icone;datatype:string,name:categoria_icone;datatype:string,name:descricao_icone;datatype:string,name:site_icone;datatype:string,name:icone_icone;datatype:string,name:meta_busca;datatype:string" />
+</info>

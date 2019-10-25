@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_listar" value="name:id_mural;datatype:int,name:nome_mural;datatype:string,name:cidade_estado_mural;datatype:string,name:msg_mural;datatype:blob,name:status_mural;datatype:string" />
+</info>

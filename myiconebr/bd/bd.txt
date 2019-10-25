@@ -1,0 +1,414 @@
+-- phpMyAdmin SQL Dump
+-- version 3.3.3
+-- http://www.phpmyadmin.net
+--
+-- Servidor: mysql12.kinghost.net
+-- Tempo de GeraÁ„o: Dez 21, 2010 as 09:05 AM
+-- Vers„o do Servidor: 5.1.52
+-- Vers„o do PHP: 5.2.9
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Banco de Dados: `myicone`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `clientesfisico`
+--
+
+CREATE TABLE IF NOT EXISTS `clientesfisico` (
+  `nome` varchar(60) DEFAULT NULL,
+  `email` varchar(60) DEFAULT NULL,
+  `telefone2` int(2) DEFAULT NULL,
+  `telefone` int(8) DEFAULT NULL,
+  `endereÁo` varchar(70) DEFAULT NULL,
+  `cidade` varchar(20) DEFAULT NULL,
+  `estado` varchar(2) DEFAULT NULL,
+  `bairro` varchar(20) DEFAULT NULL,
+  `paÌs` varchar(20) DEFAULT NULL,
+  `login` varchar(12) DEFAULT NULL,
+  `senha` varchar(8) DEFAULT NULL,
+  `cpf` varchar(11) DEFAULT NULL,
+  `celular` varchar(8) DEFAULT NULL,
+  `icone` varchar(100) DEFAULT NULL,
+  `website` varchar(500) DEFAULT NULL,
+  `id` int(200) NOT NULL AUTO_INCREMENT,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Extraindo dados da tabela `clientesfisico`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `clientesjuridico`
+--
+
+CREATE TABLE IF NOT EXISTS `clientesjuridico` (
+  `responsavel` varchar(60) DEFAULT NULL,
+  `email` varchar(60) DEFAULT NULL,
+  `telefone2` int(2) DEFAULT NULL,
+  `telefone` int(8) DEFAULT NULL,
+  `endereÁo` varchar(70) DEFAULT NULL,
+  `cidade` varchar(20) DEFAULT NULL,
+  `estado` varchar(2) DEFAULT NULL,
+  `bairro` varchar(20) DEFAULT NULL,
+  `paÌs` varchar(20) DEFAULT NULL,
+  `login` varchar(12) DEFAULT NULL,
+  `senha` varchar(8) DEFAULT NULL,
+  `cnpj` varchar(11) DEFAULT NULL,
+  `razaosocial` varchar(8) DEFAULT NULL,
+  `nomefantasia` varchar(100) NOT NULL,
+  `icone` varchar(100) DEFAULT NULL,
+  `website` varchar(500) DEFAULT NULL,
+  `id` int(200) NOT NULL AUTO_INCREMENT,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Extraindo dados da tabela `clientesjuridico`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `criaricones`
+--
+
+CREATE TABLE IF NOT EXISTS `criaricones` (
+  `id_icone` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_icone` varchar(150) NOT NULL,
+  `categoria_icone` varchar(50) NOT NULL,
+  `descricao_icone` varchar(150) NOT NULL,
+  `site_icone` varchar(150) NOT NULL,
+  `icone_icone` varchar(100) NOT NULL,
+  `meta_busca` varchar(255) NOT NULL,
+  PRIMARY KEY (`id_icone`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=206 ;
+
+--
+-- Extraindo dados da tabela `criaricones`
+--
+
+INSERT INTO `criaricones` (`id_icone`, `nome_icone`, `categoria_icone`, `descricao_icone`, `site_icone`, `icone_icone`, `meta_busca`) VALUES
+(1, 'Faculdade Anhanguera', 'Faculdade', 'Faculdade', 'http://www.unianhanguera.edu.br/home/index.php', 'a.jpg', 'Faculdade Anhanguera, FAC, FaculdadeAnhanguera,fac,faculdade anhaguera,'),
+(2, 'Mercado Livre', 'Portal', 'Portal', 'http://www.mercadolivre.com.br/', 'mercadolivre.jpg', 'Mercados Livres, MercadoLivre,mercado, merc,'),
+(3, 'Banco Itau', 'Bancos', 'Banco', 'http://www.itau.com.br/', 'itau.jpg', 'Bancos Ita˙, Banco Ita˙, Ita˙, Itau, AgÍncia Banc·ria, Agencia Bancaria,ita,bancoitau,'),
+(4, 'BuscapÈ', 'Portal', 'Portal', 'http://www.buscape.com.br/', 'buscape.jpg', 'BuscapÈ, Buscape,busca,buscapÈ,buscape,'),
+(5, 'Google', 'Portal', 'Portal', 'http://www.google.com.br/', 'google.jpg', 'Google, Guga, Gugo, Goo,google,google.com,'),
+(6, 'Youtube', 'Portal', 'Portal', 'http://www.youtube.com/?gl=BR&hl=pt', 'youtube.jpg', 'Youtube, You, Tube,youtube, you tube,you,'),
+(7, 'Orkut', 'Portal', 'Portal', 'http;//www.orkut.com', 'orkut.jpg', 'Orkut, Okut, Or, Kut,orkut, okut,'),
+(8, 'MSN', 'Portal', 'Portal', 'http://br.msn.com/', 'msn.jpg', 'WindowsLIve, Messenger, Windows Live, MSN,msn,windows live, windowslive,'),
+(9, 'Terra', 'Portal', 'Portal', 'http://www.terra.com.br/portal/', 'terra.jpg', 'Terra, terra, ZAZ'),
+(10, 'Facebook', 'Portal', 'Portal', 'http://www.facebook.com/', 'facebook.jpg', 'Face, FaceBook, Book,facebook,face,'),
+(11, 'Icamp', 'NegÛcios', 'NegÛcios', 'http://www.icamp.com.br/', 'icamp.jpg', 'Icamp, I, Camp,icamp,icap,'),
+(12, 'Embratel', 'Telefonia', 'Telefonia', 'http://www.embratel.com.br/', 'embratel.jpg', 'Embratel, 21, embratel 21, 21 embratel,'),
+(13, 'Bradesco', 'Bancos', 'Banco', 'http://www.bradesco.com.br/', 'bradesco.jpg', 'Bancos Bradesco, Bradeco, BancoBradesco, AgÍncia Banc·ria, Agencia Bancaria,bradesco, agencia bancaria bradesco, banco bradesco,'),
+(14, 'Americanas', 'Loja', 'Loja', 'http://www.americanas.com.br/', 'americanas.jpg', 'Lojas, Loja, Americanas,lojas americanas,americanas lojas, americana.com, americanas,'),
+(15, 'Submarino', 'Portal', 'Portal', 'http://www.submarino.com.br/', 'submarino.jpg', 'Sub, Marino, SubMarino,submarino.com.br,submarino,submarino.com,'),
+(16, 'Coca-Cola', 'Bebida', 'Bebida', 'http://www.cocacola.com.br/pt/index.html', 'cocacola.jpg', 'Coca Cola, cocacola, sempre coca cola,coca,coca cola,'),
+(17, 'Gmail', 'Email', 'Email', 'https://www.google.com/accounts/ServiceLogin?service=mail&passive=true&rm=false&continue=http%3A//mail.google.com/mail/?ui=html&zy=l&bsv=1eic6yu9oa4y3', 'gmail.jpg', 'Gmail, Email, Email do Google,gmail,email,e mail,'),
+(18, 'Telefonica', 'Telefonia', 'Telefonia', 'http://www.telefonica.com.br/portal/site/residencial', 'telefonica.jpg', 'Telefonica, 15, Super 15, Speedy,tele, telefonica, super 15, 15 super telefonica,'),
+(19, 'Globo', 'Portal', 'Portal', 'http://www.globo.com/', 'globo.jpg', ''),
+(20, 'Blogger', 'Blog', 'Blog', 'https://www.blogger.com/start', 'blogger.jpg', ''),
+(21, 'Itelefonica', 'Email', 'Email', 'http://webmail.itelefonica.com.br/', 'itelefonica.jpg', ''),
+(22, 'Alta Vista', 'Portal', 'Portal', 'http://br.altavista.com/', 'altavista.jpg', 'Alta Vista, altavista, Alta, Vista, Buscador'),
+(23, 'Tim', 'Telefonia', 'Telefonia', 'http://www.tim.com.br/portal/site/PortalWeb/menuitem.06243559e24e67a19a132910703016a0?wfe_url_requested=/portal/site/PortalWeb', 'tim.jpg', 'Tim, TIM, telefonia celular'),
+(24, 'IG', 'Portal', 'Portal', 'http://www.ig.com.br/', 'ig.jpg', 'IG, ig, internet gratis'),
+(25, 'Twitter', 'Portal', 'Portal', 'http://twitter.com/', 'twitter.jpg', 'Twitter, twiter, t, witer'),
+(26, 'Baixaki', 'Portal', 'Portal', 'http://www.baixaki.com.br/', 'BAIXAKI.jpg', 'Baixaki, Baichaki, Baixa, Ki'),
+(27, 'P‚nico na TV', 'ComÈdia', 'ComÈdia', 'http://www.redetv.com.br/portal/paniconatv/', 'panico.jpg', 'P‚nico, Panico, TV'),
+(28, 'Yahoo', 'Portal', 'Portal', 'http://br.yahoo.com/', 'yahoo.jpg', 'Yahoo, yaho, yao, iarro'),
+(29, 'Oi', 'Telefonia', 'Telefonia', 'http://www.oi.com.br/prehome2.html?referrer=undefined', 'oi.jpg', 'Oi, telefonica celular'),
+(30, 'CadÍ', 'Portal', 'Portal', 'http://cade.search.yahoo.com/', 'cade.jpg', 'CadÍ, cade, buscador'),
+(31, 'Banco Unibanco', 'Bancos', 'Banco', 'http://www.unibanco.com.br/vste/_exc/_hom/index.asp', 'unibanco.jpg', 'Bancos Unibanco, Bancos, Banco, Uni, Banco'),
+(32, 'Aonde', 'Portal', 'Portal', 'http://www.aonde.com.br/', 'aonde.jpg', 'Aonde, Onde, a onde'),
+(33, 'Superdownloads', 'Download', 'Download', 'http://www.superdownloads.com.br/', 'sd.jpg', 'Super, Download, superdownloads, superdownload'),
+(34, 'Anatel', 'Telefonia', 'Telefonia', 'http://www.anatel.gov.br/Portal/exibirPortalInternet.do', 'anatel.jpg', 'Anatel, telefonia'),
+(35, 'Banco Real', 'Bancos', 'Banco', 'http://www.bancoreal.com.br/', 'bancoreal.jpg', 'Bancos Real, Banco Real, Real, AgÍncia Banc·ria, Agencia Bancaria'),
+(36, 'Correios', 'Governo', 'Governo', 'http://www.correios.com.br/', 'correio.jpg', 'Correios, Correio, correio'),
+(37, 'Casas Bahia', 'Loja', 'Loja', 'http://www.casasbahia.com.br/', 'casasbahia.jpg', 'Loja, Casas Bahia, casasbahia, Casas, Bahia'),
+(38, 'UOL', 'Portal', 'Portal', 'http://www.uol.com.br/', 'uol.jpg', 'UOL, Universo Online'),
+(39, 'Myspace', 'Portal', 'Portal', 'http://br.myspace.com/', 'myspace.jpg', 'My Space, Meu EspaÁo'),
+(40, 'BOL', 'Portal', 'Portal', 'http://www.bol.uol.com.br/', 'bol.jpg', 'BOL, Brasil Online'),
+(41, 'Polishop', 'Loja', 'Loja', 'http://www.polishop.com.br/a', 'polishop.jpg', 'Loja, PoliShop, Shop'),
+(42, 'Nike', 'Esporte', 'Esporte', 'http://www.nike.com/nikeos/p/nike/language_select/', 'nike.jpg', 'Nike, nike, Esporte'),
+(43, 'Capricho', 'Entreterimento', 'Entreterimento', 'http://capricho.abril.com.br/home/', 'capricho.jpg', 'Capricho, Revista'),
+(44, 'Detran', 'Tr‚nsito', 'Tr‚nsito', 'http://www.detran.sp.gov.br/', 'detran.jpg', 'Detran, Tr‚nsito, Trafego, Transito, Trafego'),
+(45, 'Enem', 'Governo', 'Governo', 'http://enem.inep.gov.br/', 'mec.jpg', 'Enem, Exame Nacional Do Ensino MÈdio, MEC'),
+(46, 'Nestle', 'Comida', 'Comida', 'http://www.nestle.com.br/site/home.aspx', 'nestle.jpg', 'Nestle, nestle, doces, sorvetes, alimento'),
+(47, 'Giraffas', 'Comida', 'Comida', 'http://www.novositedogiraffas.com/', 'giraffas.jpg', 'Giraffas, girafas, gira, comida, alimentos'),
+(48, 'Banco do Brasil', 'Bancos', 'Banco', 'http://www.bb.com.br/portalbb/home23,116,116,1,1,1,1.bb', 'bb.jpg', 'Bancos do Brasil, Banco do Brasil, BB, AgÍncia Banc·rio, Agencia Bancaria'),
+(49, 'Claro', 'Telefonia', 'Telefonia', 'http://www.claro.com.br/portal/pre_home.jsp', 'claro.jpg', 'Claro, Telefonica Celular, Claro Ideias'),
+(50, 'Saraiva', 'Livraria', 'Livraria', 'http://www.livrariasaraiva.com.br/', 'saraiva.jpg', 'Saraiva, OnLine, Loja, Iguatemi'),
+(51, 'Banco Santander', 'Bancos', 'Banco', 'http://www.santander.com.br/portal/gsb/script/templates/GCMRequest.do?page=3340', 'santander.jpg', 'Banco Santander, Bancos Santander, AgÍncia Banc·ria, Agencia Bancaria'),
+(52, 'Extra', 'Supermercado', 'Supermercado', 'http://www.extra.com.br/', 'extra.jpg', 'Extra, extra, supermercado, mercado'),
+(53, 'Habibs', 'Comida', 'Comida', 'http://www.habibs.com.br/', 'habibs.jpg', 'Habibs, habibis, hab'),
+(54, 'Kalunga', 'Loja', 'Loja', 'http://www.kalunga.com.br/default.asp?cookie_test=1', 'kalunga.jpg', 'Kalunga, Calunga, Lunga, Ka'),
+(55, 'Kboing', 'Musica', 'Musica', 'http://www.kboing.com.br/', 'Kboing.jpg', 'Kboing, k'),
+(56, 'Google Maps', 'Mapas', 'Mapas', 'http://maps.google.com.br/', 'googlemaps.jpg', 'Google Maps, Google Mapas, Mapas, maps'),
+(57, 'WikipÈdia', 'Portal', 'Portal', 'http://pt.wikipedia.org/wiki/P%C3%A1gina_principal', 'wikipedia.jpg', 'WikipÈdia, Wikipedia, pedia, EnciclopÈdia, Enciclopedia'),
+(58, 'Fiat', 'Automovel', 'Automovel', 'http://www.fiat.com.br/', 'fiat.jpg', 'Fiat, fiat, Uno, automÛvel, carro, carros'),
+(59, 'Carrefour', 'Supermercado', 'Supermercado', 'http://www.carrefour.com.br/', 'carrefour.jpg', 'Carrefour, Carrefor, Carre, for, Four, supermercado, mercado'),
+(60, 'Shoptime', 'Loja', 'Loja', 'http://www.shoptime.com.br/', 'shoptime.jpg', 'Shoptime, shop, time, loja, online'),
+(61, 'Mcdonalds', 'Comida', 'Comida', 'http://www.mcdonalds.com.br/', 'mcdonalds.jpg', 'Mcdonalds, Mc, Lanche, Fast Food'),
+(62, 'Intel', 'Tecnologia', 'Tecnologia', 'http://www.intel.com/?pt_BR_01', 'intel.jpg', 'Intel, processadores, processador'),
+(63, 'Honda', 'Automovel', 'Automovel', 'http://www.honda.com.br/Paginas/default.aspx', 'honda.jpg', 'Honda, honda, carro, moto, automÛvel '),
+(64, 'Adobe', 'Inform·tica', 'Inform·tica', 'http://www.adobe.com/br/', 'adobe.jpg', 'Adobe, Flash, Fireworks, Dreamwaver, Macromedia'),
+(65, 'CBF SeleÁ„o Brasileira', 'Futebol', 'Futebol', 'http://www.cbf.com.br/php/home.php?e=0', 'cbf.jpg', 'CBF, Selecao Brasileira, SeleÁ„o Brasileira, Futebol, Brasil'),
+(66, 'Nasa', 'Governo', 'Governo', 'http://www.nasa.gov/', 'nasa.jpg', 'Nasa, Naza, estrelas, espaÁo, Estados Unidos, USA, EUA'),
+(67, 'Wolkswagen	', 'Automovel', 'Automovel', 'http://www.volkswagen.de/br/pt.html', 'wolkswagen.jpg', 'Wolkswagen, carro, automÛvel '),
+(68, 'Unicamp', 'Universidade', 'Universidade', 'http://www.unicamp.br/unicamp/', 'unicamp.jpg', 'Unicamp, Universidade'),
+(69, '4 Rodas Quatro Rodas', 'Revista', 'Revista', 'http://quatrorodas.abril.com.br/QR2/', 'quatrorodas.jpg', '4 Rodas, Quatro Rodas, Revista, Carro, moto automÛvel'),
+(70, 'Motorola', 'Telefonia', 'Telefonia', 'http://www.motorola.com/consumers/v/index.jsp?vgnextoid=89b9f083ded00210VgnVCM1000008406b00aRCRD', 'motorola.jpg', 'Motorola, telefonica celular, hello motor'),
+(71, 'Anglo', 'Ensino', 'Ensino', 'http://convenio.cursoanglo.com.br/Home.aspx', 'anglo.jpg', 'Anglo, Sistema de Ensino, Escolas, Vestibular'),
+(72, 'O Botic·rio', 'Perfumaria', 'Perfumaria', 'http://internet.boticario.com.br/portal/site/internetbr/', 'oboticario.jpg', 'Botic·rio, Perfumaria, Perfumes'),
+(73, 'Ponto Frio', 'Loja', 'Loja', 'http://www.pontofrio.com.br/', 'pontofrio.jpg', 'Loja, Ponto Frio, ponto, frio Lojas'),
+(74, 'Caixa Economica Federal', 'Bancos', 'Banco', 'http://www.caixa.gov.br/', 'caixa.jpg', 'Caixa, Economica, Federal, Lotericas, PIS, Seguro Desemprego'),
+(75, 'Sky', 'TV', 'TV', 'http://www.sky.com.br/home/home/default.aspx', 'sky.jpg', 'SKY, TV, Assinatura, a cabo'),
+(76, 'Tigre', 'ConstruÁ„o', 'ConstruÁ„o', 'http://www.tigre.com.br/pt/index.php', 'tigre.jpg', 'ConstruÁ„o, Tigre, construcao, tigre'),
+(77, 'Visa', 'Cart„o', 'Cart„o', 'http://www.visa.com.br/go/principal.aspx', 'visa.jpg', 'visa, cartao de credito, cart„o de crÈdito, visa'),
+(78, 'Skype', 'ComunicaÁ„o', 'ComunicaÁ„o', 'http://www.skype.com/intl/pt/home/', 'skype.jpg', 'ComunicaÁ„o, skype, comunicacao'),
+(79, 'Hotmail', 'Email', 'Email', 'https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=11&ct=1285889169&rver=6.0.5285.0&wp=MBI&wreply=http://mail.live.com/default.aspx&lc=1046&id=64855', 'msn_1.jpg', 'Email, hot, hotmail'),
+(80, 'Sebrae', 'Ensino', 'Ensino', 'http://www.sebrae.com.br/', 'sebrae.jpg', 'Sebrae, Ensino, Escola, escola'),
+(81, 'TAM', 'AviaÁ„o', 'AviaÁ„o', 'http://www.tam.com.br/b2c/vgn/v/index.jsp?vgnextoid=97981ed526b72210VgnVCM1000003752070aRCRD', 'tam.jpg', 'AviaÁ„o, aviao, tam'),
+(82, 'Dell', 'Tecnologia', 'Tecnologia', 'http://www.dell.com.br/', 'dell.jpg', 'Tecnologia, computadores, dell, pc'),
+(83, 'Receita Federal', 'Governo', 'Governo', 'http://www.receita.fazenda.gov.br/', 'receita.jpg', 'gov, receita, federal, imposto de renda'),
+(84, 'SÈculo 21', 'Igreja', 'Igreja', 'http://www.tvseculo21.org.br/tv/', 'seculo21.jpg', 'Igreja, sÈculo 21, catolica'),
+(85, 'Poupatempo', 'Publico', 'Publico', 'http://www.poupatempo.sp.gov.br/home/', 'poupatempo.jpg', 'Publico, campinas, poupatempo, serviÁos'),
+(86, 'Ford', 'Automovel', 'Automovel', 'http://www.ford.com.br/', 'ford.jpg', 'Automovel, carro, ford, '),
+(87, 'LG', 'Tecnologia', 'Tecnologia', 'http://www.lge.com/br/index.jsp', 'lg.jpg', 'Tecnologia, TV Imagem, Som, LG'),
+(88, 'NET Virtua', 'TV', 'TV', 'http://netcombo.globo.com/static/html/virtuaehd/?utm_source=google_textads&utm_medium=cpc&utm_campaign=net_virtuaehd&gclid=CP3kxvamkqMCFRkcswodOwwpsA', 'net.jpg', 'Net, TV, Combo, Virtua'),
+(89, 'TV Record', 'TV', 'TV', 'http://rederecord.r7.com/', 'record.jpg', 'TV, record, bispo macedo'),
+(90, 'SBT', 'TV', 'TV', 'http://www.sbt.com.br/home/', 'sbt.jpg', 'SBT, silvio santos, celso portioli, tele sena'),
+(91, 'Veja', 'Revista', 'Revista', 'http://veja.abril.com.br/', 'veja.jpg', 'Revista, Veja, acontecimentos'),
+(92, 'TV Band', 'TV', 'TV', 'http://www.band.com.br/', 'band.jpg', 'TV, band, esportes, notÌcias'),
+(93, 'Senai', 'Ensino', 'Ensino', 'http://www.senai.br/br/home/index.aspx', 'senai.jpg', 'Senai, Estudante, '),
+(94, 'Pequenas Empresas Grandes NegÛcios', 'NegÛcios', 'NegÛcios', 'http://revistapegn.globo.com/', 'PEGN.jpg', 'Pequenas Empresas Grandes NegÛcios'),
+(95, 'O Globo', 'Jornal', 'Jornal', 'http://oglobo.globo.com/', 'oglobo.jpg', 'Glob, esportes, noticias, entreterimento, novelas'),
+(96, 'Itautec', 'Tecnologia', 'Tecnologia', 'http://www.itautec.com.br/pt-br', 'itautec.jpg', 'Computadores, Itau, Itautec'),
+(97, 'Exame', 'Jornal', 'Jornal', 'http://portalexame.abril.com.br/', 'exame.jpg', 'Jornal, Exame, Revista, documento'),
+(98, 'Estad„o', 'Jornal', 'Jornal', 'http://www.estadao.com.br/', 'estadao.jpg', 'Estad„o'),
+(99, 'Gol', 'AviaÁ„o', 'AviaÁ„o', 'http://www.voegol.com.br/Paginas/home.aspx', 'gol.jpg', 'Gol, aviao, gol, avioes'),
+(101, 'Unimed', 'Sa˙de', 'Sa˙de', 'http://www.unimed.com.br/pct/index.jsp?cd_canal=49146', 'unimed.jpg', 'Unimed, saude, plano de saude'),
+(102, '3M', 'Tecnologia', 'Tecnologia', 'http://solutions.3m.com.br/wps/portal/3M/pt_BR/WW2/Country/', '3m.jpg', 'Tecnologia, 3m'),
+(103, 'Samsung', 'Tecnologia', 'Tecnologia', 'http://www.samsung.com/br/', 'samsung.jpg', 'Samsung, Tecnologia TV IMAGEM E SOM'),
+(104, 'IBM', 'Tecnologia', 'Tecnologia', 'http://www.ibm.com/br/pt/', 'ibm.jpg', 'Tecnologia, IBM, Computadores'),
+(105, 'Microsoft', 'Tecnologia', 'Tecnologia', 'http://www.microsoft.com/pt/br/default.aspx', 'microsoft.jpg', 'Microsoft, Windows, Bill Gattes, Office'),
+(106, 'Bosch', 'Maquinas', 'M·quinas', 'http://www.bosch.com.br/content/language1/html/index.htm', 'bosch.jpg', 'Bosch, Maquinas, furadeiras'),
+(107, 'Bing', 'Imagens', 'Imagens', 'http://www.bing.com/', 'bing.jpg', 'Bing, Imagem'),
+(108, 'Mercedez', 'Automovel', 'Automovel', 'http://www.mercedes-benz.com.br/', 'mercedes.jpg', 'Mercedez, cÈu, mar, terra'),
+(109, 'Faculdade Iescamp', 'Faculdade', 'Faculdade', 'http://www.iescamp.com.br/capa/', 'ies.jpg', 'GVA, IESCAMP, FACULDADE'),
+(110, 'Instituto Educacional Raphael Di Santo', 'Escola', 'Escola', 'http://www.raphaeldisanto.com.br/capa/', 'rds.jpg', 'RDS, Raphael Di Santo, GVA'),
+(111, 'ColÈgio Vivendo e Aprendendo', 'Escola', 'Escola', 'http://www.colegiovivendoeaprendendo.com.br/capa/', 'vivendo.jpg', 'GVA, ColÈgio Vivendo e Aprendendo'),
+(112, 'Saida', 'Comida', 'Comida', 'http://www.sadia.com.br/?utm_source=google&utm_medium=cpc&utm_term=sadia&utm_content=sadia&utm_campaign=vida_com_s_-_institucional&s_kwcid=VidaComS_Li', 'sadia.jpg', ''),
+(113, 'Renault', 'Automovel', 'Automovel', 'http://www.renault.com.br/', 'Renault.jpg', ''),
+(114, 'Positivo', 'Inform·tica', 'Inform·tica', 'http://www.positivoinformatica.com.br/site/', 'positivo.jpg', ''),
+(115, 'HP', 'Impressoras', 'Impressoras', 'http://www8.hp.com/br/pt/home.html', 'hp.jpg', ''),
+(116, 'Metrocamp', 'Faculdade', 'Faculdade', 'http://www.creditopravaler.com.br/ondeestudar/graduacao/sp/metrocamp/?gclid=CM2bzM-Fy6MCFQXt7Qodblwftw', 'metrocamp.jpg', ''),
+(117, 'Microcamp', 'Escola', 'Escola', 'http://www.microcamp.com.br/', 'microcamp.jpg', ''),
+(118, 'Subway', 'Comida', 'Comida', 'http://world.subway.com/Countries/frmMainPage.aspx?CC=BRA', 'subway_logo_large.jpg', ''),
+(119, 'Moviecom', 'Cinema', 'Cinema', 'http://www.moviecom.com.br/', 'moviecom.jpg', ''),
+(120, 'Oficina do Estudante', 'Curso', 'Curso', 'http://www.oficinadoestudante.com.br/site_novo/', 'oficina.jpg', ''),
+(121, 'Gillette', 'Pessoal', 'Pessoal', 'http://www.gillette.com/pt-BR/', 'gillette.jpg', ''),
+(122, 'USP', 'Universidade', 'Universidade', 'http://www4.usp.br/', 'usp.jpg', ''),
+(123, 'Catho', 'Empregos', 'Empregos', 'http://www.catho.com.br/', 'catho.jpg', ''),
+(124, 'Sony Ericsson', 'Telefonia', 'Telefonia', 'http://www.sonyericsson.com/cws/home?lc=pt&cc=br', 'sony-ericsson-logo.jpg', ''),
+(125, 'Compaq', 'Tecnologia', 'Tecnologia', 'http://www.compaq.com/country/index.html', 'compaq.jpg', ''),
+(126, 'Cinema e Pipoca', 'Cinema', 'Cinema', 'http://www.cinemaepipoca.blogspot.com/', 'cine.jpg', ''),
+(127, 'UBUNTU', 'Linux', 'Linux', 'http://www.ubuntu-br.org/', 'ubuntu.jpg', ''),
+(128, '4Shared', 'Musica', 'Musica', 'http://www.4shared.com/', '4shared.jpg', ''),
+(129, 'People', 'Escola', 'Escola', 'http://www.people.com.br/', 'people.jpg', ''),
+(130, 'CNA', 'Escola', 'Escola', 'http://www.cna.com.br/', 'cna.jpg', ''),
+(131, 'Pro Jovem', 'Governo', 'Governo', 'http://www.projovemurbano.gov.br/site/', 'Projovem.jpg', ''),
+(132, 'Apontador', 'Portal', 'Portal', 'http://www.apontador.com.br/', 'apontador.jpg', ''),
+(133, 'Google Docs', 'Documentos', 'Documentos', 'https://www.google.com/accounts/ServiceLogin?service=writely&passive=1209600&continue=http://docs.google.com/&followup=http://docs.google.com/&ltmpl=h', 'googledocs.jpg', ''),
+(134, 'Globo Esporte', 'Globo', 'Globo', 'http://globoesporte.globo.com/', 'globoesporte.jpg', ''),
+(135, 'Universidade S„o Francisco', 'Universidade', 'Universidade', 'http://www.usf.com.br/', 'saofrancisco.jpg', ''),
+(136, 'Apple', 'Tecnologia', 'Tecnologia', 'http://www.apple.com/br/', 'aple.jpg', ''),
+(137, 'Rolex', 'RelÛgio', 'RelÛgio', 'http://www.rolex.com/', 'role.jpg', ''),
+(138, 'Digg', 'Portal', 'Portal', 'http://digg.com/news', 'digg.jpg', ''),
+(139, 'Brastemp', 'Casa', 'Casa', 'http://www.brastemp.com.br/ch/index.aspx', 'brastemp.jpg', ''),
+(140, 'Genius', 'Tecnologia', 'Tecnologia', 'http://www.geniusnet.com/wSite/mp?mp=5', 'genius.jpg', ''),
+(141, 'Abril', 'Editora', 'Editora', 'http://www.abril.com.br/', 'abril.jpg', ''),
+(142, 'Megaupload', 'Download', 'Download', 'http://www.megaupload.com/', 'megaupload.jpg', ''),
+(143, 'PagSerugo', 'Pagamento', 'Pagamento', 'https://pagseguro.uol.com.br/#rmcl', 'pagseguro.jpg', ''),
+(144, 'Webmotors', 'Moto', 'Moto', 'http://www.webmotors.com.br/index.html', 'webmotors.jpg', ''),
+(145, 'CooperFertil', 'Transportadora', 'Transportadora', 'http://www.cooperfertil.com.br/', 'cooper.jpg', ''),
+(146, 'CET', 'Ensino', 'Ensino', 'http://www.cetsp.com.br/', 'cet.jpg', ''),
+(147, 'Autoban', 'Estradas', 'Estradas', 'http://www.autoban.com.br/', 'autoban.jpg', ''),
+(148, 'National Geographic', 'Conhecimento', 'Conhecimento', 'http://viajeaqui.abril.com.br/national-geographic/', 'national.jpg', ''),
+(149, 'Reebok', 'Esporte', 'Esporte', 'http://www.reebok.com.br/', 'reebook.jpg', ''),
+(150, 'Wizard', 'Escola', 'Escola', 'http://wizard.com.br/', 'wizard.jpg', ''),
+(151, 'Rccoaching', 'Consultoria', 'Consultoria', 'http://rccoaching.com.br/', 'rc.jpg', ''),
+(152, 'CeA C&A', 'Loja', 'Loja', 'http://www.cea.com.br/', 'cea.jpg', ''),
+(153, 'CCE', 'TV', 'TV', 'http://www.cce.com.br/', 'cce.jpg', ''),
+(154, 'Vagalume', 'Musica', 'Musica', 'http://www.vagalume.com.br/', 'vagalume.jpg', ''),
+(155, 'Magazine Luiza', 'Loja', 'Loja', 'http://www.magazineluiza.com.br/', 'maga.jpg', ''),
+(156, 'Hering', 'Roupa', 'Roupa', 'http://www.hering.com.br/', 'hering.jpg', ''),
+(157, 'Pernambucanas', 'Loja', 'Loja', 'http://www.pernambucanas.com.br/', 'per.jpg', ''),
+(158, 'Carol', 'Optica', 'Optica', 'http://www.oticascarol.com.br/', 'carol.jpg', ''),
+(159, 'Renner', 'Loja', 'Loja', 'http://www.lojasrenner.com.br/', 'renner.jpg', ''),
+(160, 'Riachuelo', 'Loja', 'Loja', 'http://www.riachuelo.com.br/home.aspx', 'riachu.jpg', ''),
+(161, 'Fototica', 'Fotos', 'Fotos', 'http://fotoptica.digipix.com.br/', 'optica.jpg', ''),
+(162, 'Cielo', 'Cart„o', 'Cart„o', 'http://www.cielo.com.br/portal/fale-conosco/atendimento-por-telefone.html', 'cielo.jpg', ''),
+(163, 'Lupo', 'Roupa', 'Roupa', 'http://site.lupo.com.br/', 'lupo.jpg', ''),
+(164, 'Leroy Merlin', 'ConstruÁ„o', 'ConstruÁ„o', 'http://www.leroymerlin.com.br/', 'leroy.jpg', ''),
+(165, 'C&C CeC Casa e ConstruÁ„o', 'ConstruÁ„o', 'ConstruÁ„o', 'http://www.cec.com.br/Ecommerce/Promocao/promocao.aspx', 'cc.jpg', ''),
+(166, 'Telha Norte', 'ConstruÁ„o', 'ConstruÁ„o', 'http://www.telhanorte.com.br/', 'telhanorte.jpg', ''),
+(167, 'Listel', 'Lista', 'Lista', 'http://www.guiamais.com.br/', 'listel.jpg', ''),
+(168, 'Mizuno', 'Esporte', 'Esporte', 'http://www.mizunobr.com.br/', 'mizuno.jpg', ''),
+(169, 'king Host', 'Hospedagem', 'Hospedagem', 'http://www.kinghost.com.br/', 'kinghost.jpg', ''),
+(170, 'Lojas CEM', 'Loja', 'Loja', 'http://www.lojascem.com.br/sitenew/', 'cem.jpg', ''),
+(171, 'Colombo', 'Loja', 'Loja', 'http://www.colombo.com.br/', 'colombo.jpg', ''),
+(172, 'WordPress', 'Blog', 'Blog', 'http://pt-br.wordpress.com/', 'wordxpress.jpg', ''),
+(173, 'Google Traduro', 'Google', 'Google', 'http://translate.google.com.br/#', 'googletraduro.jpg', ''),
+(174, 'Walmart', 'Supermercado', 'Supermercado', 'http://www.walmart.com.br/Vitrine/Home/Home.aspx', 'walmart.jpg', ''),
+(175, 'Drogasil', 'Sa˙de', 'Sa˙de', 'http://www.drogasil.com.br/site/index.html', 'drogasil.jpg', ''),
+(176, 'Peugeot', 'Automovel', 'Automovel', 'http://carros.peugeot.com.br/', 'peugeot.jpg', ''),
+(177, 'OAB', 'Direito', 'Direito', 'http://www.oab.org.br/', 'oab.jpg', ''),
+(178, 'Decthlon', 'Esporte', 'Esporte', 'http://www.decathlon.com.br/BR/', 'de.jpg', ''),
+(179, 'Medley', 'Sa˙de', 'Sa˙de', 'http://www.medley.com.br/portal/src/', 'medley.jpg', ''),
+(180, 'Boldrini', 'Hospital', 'Hospital', 'http://www.boldrini.org.br/site/default.asp', 'boldrini.jpg', ''),
+(181, 'Acert', 'Tecnologia', 'Tecnologia', 'http://br.acer.com/acer/home.do?LanguageISOCtxParam=pt&ctx2.c2att1=29&CountryISOCtxParam=BR&ctx1.att21k=1&CRC=3634858939', 'acer.jpg', ''),
+(182, 'Colgate', 'Sa˙de', 'Sa˙de', 'http://www.colgate.com.br/app/Colgate/BR/HomePage.cvsp', 'colgate.jpg', ''),
+(183, 'Loteria Lotericas', 'Loteria', 'Loteria', 'http://www1.caixa.gov.br/loterias/index.asp', 'lotericas.jpg', ''),
+(184, 'INSS', 'Governo', 'Governo', 'http://www.previdenciasocial.gov.br/', 'inss.jpg', ''),
+(185, 'Luck Brinquedos', 'Brinquedos', 'Brinquedos', 'http://www.luckbrinquedos.com.br/', 'luck.jpg', ''),
+(186, 'Fnac', 'Livraria', 'Livraria', 'http://www.fnac.com.br/index.html?a=1&s_kwcid=TC|9389|fenac||S||4414948616', 'fanc.jpg', ''),
+(187, 'CIEE', 'Escola', 'Escola', 'http://www.ciee.org.br/portal/index.asp', 'ciee.jpg', ''),
+(188, 'AC Lucatto', 'Contabilidade', 'Contabilidade', 'http://www.aclucatto.com.br/', 'ac.jpg', ''),
+(189, 'Baboo', 'Inform·tica', 'Inform·tica', 'http://www.baboo.com.br/conteudo/modelos/2010.htm', 'baboo.jpg', ''),
+(190, 'Joven Pan', 'Radio', 'Radio', 'http://jovempanfm.virgula.uol.com.br/', 'jovenpan.jpg', ''),
+(191, 'Radio 89', 'Radio', 'Radio', 'http://www.89fm.com.br/', '89fm.jpg', ''),
+(192, 'Radio Cidade', 'Radio', 'Radio', 'http://www.radiocidade.fm.br/', 'cidade.jpg', ''),
+(193, 'Educadora Fm', 'Radio', 'Radio', 'http://educadorafm.uol.com.br/2008/', 'educadora.jpg', ''),
+(194, 'Band Campinas', 'Radio', 'Radio', 'http://www.bandfmcampinas.com.br/', 'bandfm.jpg', ''),
+(195, 'Radio Globo', 'Radio', 'Radio', 'http://globoradio.globo.com/home/HOME.htm', 'radioglobo.jpg', ''),
+(196, 'Discovery', 'TV', 'TV', 'http://www.discoverybrasil.com/', 'discovery.jpg', ''),
+(197, 'Friv', 'Games', 'Games', 'http://friv.com.br/', 'friv.jpg', ''),
+(198, 'Disney', 'Divers„o', 'Divers„o', 'http://home.disney.com.br/', 'disney.jpg', ''),
+(199, 'Warner Bros', 'Cinema', 'Cinema', 'http://www.br.warnerbros.com/web/main/homepage/homepage.jsp', 'warner.jpg', ''),
+(200, 'NEXTEL', 'Telefonia e Radio', 'Telefonia e Radio', 'http://www.nextel.com.br/NextelWebSite/quero-nextel.aspx', 'nextel.jpg', ''),
+(204, 'Banco BMG', 'Bancos', 'Banco', 'http://www.bancobmg.com.br/novo_site_bmg/INHomeProduto.aspx?menu=3&home=HOME_TIPO_PRODUTO_7&submenu=7', 'bmg.png', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `mural`
+--
+
+CREATE TABLE IF NOT EXISTS `mural` (
+  `id_mural` int(5) NOT NULL AUTO_INCREMENT,
+  `nome_mural` varchar(20) NOT NULL,
+  `cidade_estado_mural` varchar(20) NOT NULL,
+  `msg_mural` text NOT NULL,
+  `email_mural` varchar(200) NOT NULL,
+  `status_mural` char(3) NOT NULL DEFAULT 'off',
+  PRIMARY KEY (`id_mural`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=85 ;
+
+--
+-- Extraindo dados da tabela `mural`
+--
+
+INSERT INTO `mural` (`id_mural`, `nome_mural`, `cidade_estado_mural`, `msg_mural`, `email_mural`, `status_mural`) VALUES
+(8, 'MAT', 'CAMPINAS', 'OI PROFESOR E O MAT (MATHEUS N:23)eu queria pedir pra voc√™ para,que voc√™ coloque roms no my√≠cone(jogos de Nintendo Ds pra baixar)', '', 'off'),
+(6, 'Administrador', 'Campinas/SP', 'Deixe aqui seu coment√°rio.', 'admin@myicone.com', 'on'),
+(9, 'marcus', 'campinas/sp', '\r\niai pro,coloca o site da adidas', '', 'off'),
+(10, 'Junia Martins', 'Campinas-SP', 'Muito legal esse site, conhe√ßo o dono dele e PARAB√âNS mesmo (:', '', 'off'),
+(11, 'Vanderlei Martins', 'Camoinas/SP', '  Meus parabens pela iniciativa.\r\n  Nos faz poupar tempo,espero que cres√ßa bem mais', '', 'off'),
+(12, 'Marcello', 'campinas', 'nunca vi um site t√£o bom parabens', '', 'off'),
+(13, 'Marcello', 'campinas', 'nunca vi um site t√£o bom parabens', '', 'off'),
+(14, 'luucas .', 'Campinas/SP', 'manda um salve pro dougl√£o', '', 'off'),
+(15, 'Danni', 'Campinas/SP', 'Muito Bom!\r\nAconselhoo usa-lo\r\nFacilitara muito sua vida =D\r\n                      ..  !!', '', 'off'),
+(16, 'Patricia de Sousa Im', 'Campinas', 'Adorei a site!!!\r\nAt√© que tem coisa bem intere√ßante.\r\nEspero mais novidades!!!!!', '', 'off'),
+(17, 'rogerio', 'campinas', 'professor eu gostei muito do myicone.\r\nEu sou do 6 ano F', '', 'off'),
+(18, 'Aluna ', 'campinas/sp', 'professor adorei esse site tem mil e umas utilidades valeu mesmo\r\n', '', 'off'),
+(19, 'Gabriel Jos√© dos sa', 'Campinas', 'vc √© 10 √© d+ seu site √© show \r\nGabriel jose dos santos munhoz \r\nnumero 5 \r\n6-f', '', 'off'),
+(20, 'vanessa  oliveira ', 'campinas sp ', 'Sorm, seu site eh muito bom !!! ', '', 'off'),
+(21, 'Victor Lopes Bisaio', 'Campinas', 'Muito bom o site, Douglas...', '', 'off'),
+(22, 'J√∫nia Martins', 'Campinas-SP', 'Seu talento √© t√£o grande que descobrimos o melhor nele, apenas de olhar para ele . Douglas voc√™ √© uma pessoa muito legal ! adoro ter aulas com voc√ä ', '', 'off'),
+(23, 'let√≠cia jung de ass', 'CAMPINAS/SP', 'prof. \r\nvc √© d+,gostei muito do seu saite mas queria saber quando vc vai criar o portal do aluno.\r\nbjs', '', 'off'),
+(24, 'let√≠cia jung de ass', 'CAMPINAS/SP', 'prof. \r\nvc √© d+,gostei muito do seu saite mas queria saber quando vc vai criar o portal do aluno.\r\nbjs', '', 'off'),
+(25, 'ingrid escher correr', 'campinas', 'oi eu adorei ,bjus ingrid 7d', '', 'off'),
+(26, 'wesley maciel da cos', 'campinas', 'parabens Douglas!!! fez um otimo trabalho nesse site ', '', 'off'),
+(27, 'kyka', 'campinas', 'talvez se tivece um icone de pesquisa para um melhor acesso.( aparecer os icones dentro do icone de pesquisa)+ √± deixa de ter um facilidade no cesso.', '', 'off'),
+(28, 'Julia Vansan 6¬∫B', 'Campinas S√£o Paulo ', 'ADM coloca um sate que chama:\r\nwww.habbohotel.biz', '', 'off'),
+(29, 'Joao Vitor B. Mambel', 'campinas', 'oi professor, aqui √© o joao do 7¬∫A, ficou muito legual a pagina indicadores...\r\n\r\nJo√£o Vitor Belotti Mambelli', '', 'off'),
+(30, 'Maria Fernanda Belot', 'Campinas', 'oi aqui √© a irm√£ do joao vitor(seu aluno)eu gostei muito quando meu irmao(joao)colocou o my √≠cone na p.g. principal do meu pc.Mas demora muito quando eu abro minha internet pra aparecer o my √≠cone.Mas √© otimo.Muito obrigado por voc√™ inventar isto.VA  LE  U!!!!!!!!!!!!!\r\n', '', 'off'),
+(31, 'Shakira', 'USA', 'very good! Nice site ...', '', 'off'),
+(32, 'SHAKIRA', 'CALIFORNIA', 'VERY GOOD!!!', '', 'off'),
+(34, 'Salom√£o Souza', 'Campinas - SP', 'Boa Tarde, gostaria de tirar uma d√∫vida em rela√ß√£o as r√°dios disponiveis no site, ser√£o s√≥ essas mais conhecidas ? ou ainda ser√£o postadas mais √≠cones de r√°dios ? Tipo Educacorafm, Tupi, JovemPan e etc...\r\nAbra√ßo', '', 'off'),
+(35, 'Renan ', 'Campinas-SP', 'Noss Douglas d+ seu site \r\nass:Renan godoy \r\n6¬∫a', '', 'off'),
+(36, 'La√≠s ', 'Campinas ', 'esse site √© muito legal , facil de mecher gostei muito \r\nj√° atualizi na minha pagina inicial ', '', 'off'),
+(37, 'Gabriel Martins de √', 'Campinas', 'Professor Douglas:\r\neste seu site √© muito bom\r\n√© r√°pido, acesso direto etc\r\nmuito bom', '', 'off'),
+(38, 'Douglas', 'Campinas', 'Os indicadores no King aumentaram este m√™s ,muito bom esperamos que as pessoas continuem a acessar os sites que elas que gostarem.\r\nAbra√ßos... Douglas', '', 'off'),
+(39, 'Ingrid Escher Correr', 'Campinas', 'Eu adorei esse site professor Douglas,eu passei para um monte de pessoas da minha fam√≠lia,e eles tamb√©m adoraram...\r\nQuando n√£o tem algo pra fazer por exemplo eu entro no www.myicone.com e fico jogando jogos entro no Orkut,Msn,...\r\nentre outras coisas,mesmo assim eu adoreiiiii!\r\n"Bjus,\r\nda sua aluna Ingrid do 7 ano D n√∫mero 8 per√≠odo : tarde!"', '', 'off'),
+(40, 'vinicius alcantara d', 'campinas', 'professor e o Vinicius do 6 f da hora seu site viro minha pagina preferida,pois tudo que eu quiser e so entrar no site\r\n                    valeu ', '', 'off'),
+(41, 'Junia', 'Campinas/SP', 'Tenho orgulho, e prazer de poder aprender com uma pessoa como voce! J√° est√° adulto mais dentro de voc√ä existe uma crian√ßa, e √© isto que faz eu gostar mais e mais de voc√™. Meu professor, meu Mestre e conciderado tamb√©m ( MEU PAI ) kkkkkkkkkk ...', '', 'off'),
+(42, 'lucas miranda', 'campinas', 'poe esse site www.grandchase.com.br', '', 'off'),
+(43, 'wagner alves', 'campinas', 'colocar link da electro paulo por favor.', '', 'off'),
+(44, 'Lucas', 'campinas', 'parab√©ns professor Douglas', '', 'off'),
+(45, 'iago de oliveira san', 'campinas', 'eu gosto muito do seu site parabens =)', '', 'off'),
+(46, 'iago de oliveira san', 'campinas', 'eu gosto muito do seu site parabens =)', '', 'off'),
+(47, 'Gabrel Dias ', 'Campinas ', 'Parab√©ns Prof ! \r\n\r\nBelo trabalho , a pagina j√° esta em favoritos ! \r\n\r\nte mais ab√ß ! Gabriel ', '', 'off'),
+(48, 'Rafaela Castilho', 'Campinas/SP', 'PROFESSOR, ESSE SITE √â DEMAIS, TENHO QUASE TODOS OS SITES EM UM S√ì, ISSO √â INCRIVEL!! OBRIGADA POR NOS AJUDAR!!', '', 'off'),
+(49, 'henrique', 'sao paulo', 'muito bom esse site gostei muito vo fala pros amigos e minha familia tambem :)', '', 'off'),
+(50, 'Leticia Lombardo Fer', 'Campimas', 'Professor,voce colocar no seu site o peixe urbano campinas (google) ?                                                   bjuss\r\nLeticia Lombardo Ferreira\r\nnumero:15 7 ano E! ', '', 'off'),
+(51, 'Let√≠cia Lombardo', 'campinas', 'OI professor adorei seu site \r\nficando mais f√°cil de entrar nos sites escolhidos\r\nbeijos\r\n7ano E\r\ntarde', '', 'off'),
+(52, 'emanuele', 'curitiba', 'como e sites e ruin ', '', 'off'),
+(53, 'Andr√©', 'Campinas', '30.000, parab√©ns professor\r\nrumo aos 100.000 !!!!!\r\nDICA: Crie uma pagina no Twitter ou no orkut !!!\r\nAt√© mais, estamos divulgando !!', '', 'off'),
+(54, 'Osvaldo', 'Sumar√©', 'http://sportv.globo.com\r\nMuito bom o site falta este sitede cima\r\nobrigado!! \r\nMuito legal!!!\r\nContinue', '', 'off'),
+(55, 'Andr√©', 'Campinas', 'Prof.\r\nfalta estes sites: \r\nwww.chevrolet.com.br\r\n\r\n,http://sportv.globo.com', '', 'off'),
+(62, 'thamires lucia pires', 'sp-campinas', 'oi parab√©ns pelo seu site  adorei prof:douglas\r\num abra√ßo!!!', 'thamires.lps@hotmail.com', 'off'),
+(61, 'WebDesigner', 'MyIconeCity', 'Douglas tudo beleza aqui √© o WB, de uma olhada nisso, √© a nova cara que estou criando um abra√ßo fique com Deus\r\n\r\nhttp://www.myicone.com/pages\r\n\r\n"Enquanto todos correm vamos andando, por que na pressa eles deixam dicas para tr√°s"', 'web@myicone.com', 'off'),
+(63, 'Leticia Lombardo Fer', 'Campinas', 'Professor adorei seu site espero que voc√™ veja esse coment√°rio porque te adoro.\r\nA lembrei professor coloca esse site o Livemocha.com\r\nbeijos\r\nA professor esse email √© da minha mae ', 'Kattylola@ig.com.br', 'off'),
+(64, 'thiago', 'campinas', 'esse site √© muito chou cara adorei !!!!!!!', 'thigolegal@gmail.com', 'off'),
+(65, 'Caroline', 'Campinas', 'Oi professor... eu acho que voce poderia colocar o iconbe do YouTube n√©?\r\n  xau', 'carolaraujo99@hotmail.com', 'off'),
+(66, 'Guilherme', 'Campinas-SP', 'coloca o site: www.server05.narutoplayers.com', 'guitpsouza@hotmail.com', 'off'),
+(67, 'Leticia Lombardo Fer', 'campinas', 'Oi professor tudo bem?\r\nvoc√™ tem msn pra nos conversarmos se tiver mando pelo email da minha mae\r\nta beijos', 'kattylola@ig.com.br', 'off'),
+(68, 'leticia lombardo 7an', 'campinas', 'professor voce tem msn?\r\nte tiver vamo conversa \r\nme manda seu msn \r\nbeijo', 'kattylola@ig.com.br', 'off'),
+(69, 'Karine', 'Campinas/Sao Paulo', 'Oi professor!!! Gostei doo seu site,bjsss boa sorte pra ter as visualisa√ßoes !!!', 'karine_cordeiro_@hotmail.com', 'off'),
+(70, 'www.zonebin.blogspot', 'asdasd', 'asdasdas', 'asdasd', 'off'),
+(71, 'Vinicius 6 ano Rapha', 'Campinas', 'Parabens pelo seu trabalho\r\n\r\ncontinue sendo ess professor maravilhoso e engra√ßado\r\n\r\nAbra√ßos', 'viniciusisumi@hotmail.com', 'off'),
+(72, 'Vinicius 6 Raphael D', 'Campinas-SP', 'Parabens pelo seu trabalho\r\n\r\ncontinue sendo ess professor maravilhoso e engra√ßado\r\n\r\nAbra√ßos', 'viniciusisumi@hotmail.com', 'off'),
+(73, 'Lady Gaga', 'washigton', 'Very good ... His success made siteja ... Nice knowing you ... But it is far away ... I enjoyed very much !!!!!', 'Lady Gaga.jcfc@hotmail.com', 'off'),
+(74, 'leticia lombardo 7an', 'Campinas', 'professor add eu ai meu msn √© leh_lf@hotmail.com', 'leh_lf@hotmail.com', 'off'),
+(75, 'Leticia Lombardo', 'Campinas', 'Professor se de entra hoje no msn ', 'leh_lf@hotmail.com', 'off'),
+(76, 'Lucas Villela Can√¥a', 'Campinas', 'Oi professor, meu dominio j√° est√° no ar =D\r\n\r\nwww.zonebin.com', 'lucas_can13@hotmail.com', 'off'),
+(77, 'Leticia Lombardo', 'campinas', 'Professor serio mesmo que voce nao vai dar aula pros 8 anos de manha? Bom se for estou com saudade uma coisa eu sei nunca vou esquecer de voce da Fatima , das coordenadoras tambem um beijo pra todos ai ', 'leh_lf@hotmail.com', 'off'),
+(78, 'leticia lombardo 7 a', 'Campinas-sp', 'prof,passei de ano muitas saudades de voce,\r\num beijao no cora√ß√£o leticia lombardo.\r\nobs:(ano que vem estarei no per√≠odo da manh√£)', 'leticia.lf@hotmail.com', 'off'),
+(79, 'Leticia Lombardo', 'campinas', 'Professor seu msn √© douglas.negri@hotmail.com? Porque nao apareceu o convite do msn\r\n', 'leh_lf@hotmail.com', 'off'),
+(80, 'Let√≠cia Lombardo', 'campinas', 'Saudades de voce qualquer dia entra no msn \r\nProfessor seu msn √© esse : douglas.negri@hotmail.com?', 'leh_lf@hotmail.com', 'off'),
+(81, 'ingrid 7anoD', 'Campinas', 'Professor Douglas me adiciona no msn que √© ingridcorrer@hotmail.com', 'ingridcorrer@hotmail.com', 'off'),
+(82, 'ilza', 'sp campinas', 'fa√ßa um espa√ßo p achar o nome{empresa] mais rapido.\r\nquero lojas americanas.com. Tipo procurar por...', 'ilzagmf@gmail.com', 'off'),
+(83, 'ingrid correr', 'Campinas', '‚ô•______________________________________________‚ô•\r\n\r\n‚Å∫/‚ô™‚à´‚Ä∫ Ent√£o me abra√ßa forte ,\r\n\r\n‚ÄÉ‚ÄÉ‚ÄÉMe Abra√ßa ,Me Beija ,Me Morde\r\n‚ÄÉ‚ÄÉ‚ÄÉMe Chama De Meu Amor..\r\n‚ÄÉ‚ÄÉ‚ÄÉMe Abra√ßa E Deseja,\r\n‚ÄÉ‚ÄÉ‚ÄÉVem Mostrar Pra Mim O Seu Calor...\r\n\r\nMe abra√ßa me beija me aceita assim... como eu sou, e deixa ser o que for. \r\nComo as ondas com a mar√© at√© onde n√£o vai dar mais p√© nesse instante, \r\ntal, qual √©, vivo aqui e seja o que Deus quiser... (y)\r\n\r\nEnt√£o me abra√ßa forte, e diz que me ama mais que tudo.\r\nE diz mais uma vez que j√° estamos distantes de tudo...\r\n\r\nEntrou na Comunidade Deixe Seu OI (Clique Aqui)\r\n\r\n‚Äæ‚Äæ‚Äæ‚Äæ‚Äæ‚Äæ‚Äæ‚Äæ‚Äæ‚Äæ‚Äæ‚Äæ‚Äæ‚Äæ‚Äæ‚Äæ\\_‚ñ™‚ñ™‚ñ™ƒ±(Sejam bem vindos (as)! {‚ô•}\r\n\r\n‚ô•______________________________________‚ô•', 'ingridcorrer@hotmail.com', 'off'),
+(84, 'igor', 'Campinas,S√£o Paulo', 'J√° fiz de minha pagina inicial.', 'igorferronato@hotmail.com', 'off');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuario`
+--
+
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `id_user` int(11) NOT NULL AUTO_INCREMENT,
+  `login` varchar(20) NOT NULL,
+  `senha` varchar(20) NOT NULL,
+  PRIMARY KEY (`id_user`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Extraindo dados da tabela `usuario`
+--
+
+INSERT INTO `usuario` (`id_user`, `login`, `senha`) VALUES
+(1, 'admin', 'sapoboiazul');

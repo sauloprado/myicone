@@ -1,0 +1,6 @@
+index - index.php
+galeria2 - page2.php
+comunicado - comunicado.php
+jogos - games.php
+visitas - /admin/index.php
+busca - busca.php

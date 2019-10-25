@@ -1,0 +1,4 @@
+Versão servidor:  MySQL 5.1.48 x86_64 pc-linux-gnu 
+Host para conexão:  mysql.myicone.com 
+Usuário para conexão:  myicone
+

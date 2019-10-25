@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rscadastrojr" value="name:nome_razao;datatype:int,name:nome_fantasia;datatype:int,name:cnpj;datatype:int,name:endereco;datatype:int,name:bairro;datatype:int,name:cep;datatype:int,name:estado;datatype:int,name:cidade;datatype:int,name:telefone;datatype:int,name:telefone2;datatype:int,name:email;datatype:int,name:website;datatype:int,name:icone_imagem;datatype:int,name:meta_busca;datatype:int,name:meta_busca1;datatype:int,name:meta_busca2;datatype:int,name:meta_busca3;datatype:int,name:meta_busca4;datatype:int,name:meta_busca5;datatype:int,name:meta_busca6;datatype:int,name:outras_opcoes;datatype:int,name:Li;datatype:int,name:id;datatype:int" />
+</info>

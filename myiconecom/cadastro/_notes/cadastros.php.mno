@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rscadastrojr1" value="name:cnpj;datatype:string,name:website;datatype:string,name:icone_imagem;datatype:string,name:id;datatype:int" />
+</info>

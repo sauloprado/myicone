@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_criar" value="name:id_icone;datatype:int,name:nome_icone;datatype:string,name:categoria_icone;datatype:string,name:descricao_icone;datatype:string,name:site_icone;datatype:string,name:icone_icone;datatype:string,name:meta_busca;datatype:string" />
+	<infoitem key="UD_rscriaricones" value="name:nome_icone;datatype:int,name:categoria_icone;datatype:int,name:descricao_icone;datatype:int,name:site_icone;datatype:int,name:icone_icone;datatype:int,name:visitas_cliques;datatype:int,name:id_icone;datatype:int,name:meta_busca;datatype:int" />
+</info>

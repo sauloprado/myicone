@@ -1,0 +1,10 @@
+@charset "utf-8";
+.games {
+	background:url(../icones4/games.jpg);
+	width:64px;
+	height:64px;
+	position:absolute;
+	left:5%;
+	right:5%
+	
+}
