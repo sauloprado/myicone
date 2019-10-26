@@ -1,1 +1,1 @@
-# myicone-full
+# myicone
